@@ -11,12 +11,38 @@ public class BankAccount implements Valuable {
         this.balance = balance;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    // Deposits a positive amount into the account.
     public void deposit(double amount){
        if (amount > 0){
            balance += amount;
        };
     }
 
+    // Withdraws a valid amount from the account if sufficient balance is available.
     public void withdraw(double amount){
         if (amount > 0 && amount <= balance){
             balance += amount;
