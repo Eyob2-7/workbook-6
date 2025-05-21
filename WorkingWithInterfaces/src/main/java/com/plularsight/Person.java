@@ -5,6 +5,7 @@ public class Person implements Comparable<Person>{
     private String lastName;
     private int age;
 
+    // Constructor
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,14 +45,20 @@ public class Person implements Comparable<Person>{
                 '}';
     }
 
+    /**
+     * Negative if the first value comes before the other
+     * Zero if both values are equal
+     * Positive if the first value comes after the other
+     * */
     @Override
     public int compareTo(Person other) {
+
         int result;
-        result =  this.firstName.compareTo(other.getFirstName());
+        result =  this.firstName.compareToIgnoreCase(other.getFirstName());
         if(result != 0){
             return result;
         }
-        result = this.lastName.compareTo(other.getLastName());
+        result = this.lastName.compareToIgnoreCase(other.getLastName());
         if(result != 0){
             return result;
         }
