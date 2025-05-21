@@ -37,6 +37,15 @@ public class CreditCard implements Valuable{
         this.balance = balance;
     }
 
+    @Override
+    public String toString() {
+        return "CreditCard{" +
+                "name='" + name + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
     // Adds a charge to the credit card.
     public void charge(double amount) {
         if (amount > 0) {

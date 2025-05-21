@@ -38,6 +38,15 @@ public class House extends FixedAsset{
         this.bedrooms = bedrooms;
     }
 
+    @Override
+    public String toString() {
+        return "House{" +
+                "yearBuilt=" + yearBuilt +
+                ", squareFeet=" + squareFeet +
+                ", bedrooms=" + bedrooms +
+                '}';
+    }
+
     // Gets the calculated value of the house.
     @Override
     public double getValue() {

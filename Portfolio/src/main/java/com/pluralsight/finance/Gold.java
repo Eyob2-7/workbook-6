@@ -18,6 +18,13 @@ public class Gold extends FixedAsset{
         this.weight = weight;
     }
 
+    @Override
+    public String toString() {
+        return "Gold{" +
+                "weight=" + weight +
+                '}';
+    }
+
     // Calculates the value per ounce, if weight is valid.
     @Override
     public double getValue() {

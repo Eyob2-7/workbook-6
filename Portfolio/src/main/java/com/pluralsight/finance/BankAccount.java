@@ -35,6 +35,15 @@ public class BankAccount implements Valuable {
         this.balance = balance;
     }
 
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "name='" + name + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
     // Deposits a positive amount into the account.
     public void deposit(double amount){
        if (amount > 0){
